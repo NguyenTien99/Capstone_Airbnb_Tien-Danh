@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+// #EBEBEB
+// #F7F7F7
+// #DDDDDD
+//#B0B0B0
+
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+button,input{
+    outline: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+image{
+    max-width: 100%;
+}
+
+iframe{
+    border: 0;
+}
