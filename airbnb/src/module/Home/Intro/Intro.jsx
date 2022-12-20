@@ -17,7 +17,6 @@ const Intro = () => {
   const navigate = useNavigate();
   const { locations } = useSelector((state) => state.locationSlice);
   const [locationId, setlocationId] = useState(0);
-  
 
   useEffect(() => {
     dispatch(getlocations());
@@ -37,22 +36,23 @@ const Intro = () => {
           <div className={styles.nameLocations}>
             <h1>{locations[locationId].tinhThanh}</h1>
             <h4>{locations[locationId].tenViTri}</h4>
-            <button onClick={() => navigate(`/location/${locations[locationId].id}`)}>Khám phá</button>
+            <button
+              onClick={() => navigate(`/location/${locations[locationId].id}`)}
+            >
+              Khám phá
+            </button>
           </div>
-          <div
-            className={styles.wrapSwiper}
-            // style={{ backgroundImage: `url(${locations[locationId].hinhAnh})` }}
-          >
+          <div className={styles.wrapSwiper}>
             <Swiper
               effect={"coverflow"}
               grabCursor={true}
               centeredSlides={true}
               slidesPerView={"auto"}
               loop={true}
-              // autoplay={{
-              //   delay: 2500,
-              //   disableOnInteraction: false,
-              // }}
+            //   autoplay={{
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            //   }}
               coverflowEffect={{
                 rotate: 50,
                 stretch: 0,
